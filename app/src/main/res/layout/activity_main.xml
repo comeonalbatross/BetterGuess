@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="258dp"
+        android:onClick="guessButton"
+        android:text="GUESS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/wordInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Word.."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/guessButton"
+        app:layout_constraintStart_toStartOf="@+id/guessButton" />
+
+    <Button
+        android:id="@+id/clueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="clueButton"
+        android:text="CLUE"
+        app:layout_constraintEnd_toEndOf="@+id/wordInputText"
+        app:layout_constraintTop_toBottomOf="@+id/wordInputText" />
+
+    <TextView
+        android:id="@+id/remainingAttemptsText"
+        android:layout_width="351dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/alata"
+        android:text="REMAINING ATTEMPTS : "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/remainingCluesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/remainingCluesText"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/alata1"
+        android:text="REMAINING CLUES : "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/errorIndicator"
+        app:layout_constraintStart_toStartOf="@+id/remainingAttemptsText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="CLUE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/pointsText"
+        app:layout_constraintTop_toBottomOf="@+id/pointsText" />
+
+    <TextView
+        android:id="@+id/errorIndicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/alata1"
+        android:text="WELCOME"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pointsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainingCluesText" />
+
+    <TextView
+        android:id="@+id/pointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="30dp"
+        android:text="POINTS : "
+        app:layout_constraintBottom_toTopOf="@+id/wordInputText"
+        app:layout_constraintEnd_toEndOf="@+id/remainingAttemptsText"
+        app:layout_constraintStart_toStartOf="@+id/guessButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
